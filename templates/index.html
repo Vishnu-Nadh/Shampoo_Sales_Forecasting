@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../static/style.css" />
   </head>
   <body>
     <main class="main-container">
@@ -19,7 +19,7 @@
       <div class="line"></div>
       <div class="input-div">
         <h4 class="sub-header">Predict the Sales of Shampoo</h4>
-        <form action="#" method="post" class="input-form">
+        <form action="/predict_sales" method="post" class="input-form">
           <div class="inputs">
             <div class="from">
               <h5 class="input-label">From</h5>
@@ -83,9 +83,12 @@
         </form>
       </div>
       <div class="show-result">
+        <div class="result-loader">
+          <img src="../static/Spinner.gif" alt="" />
+        </div>
         <a href="#" class="download-result">Clik Me Download Result </a>
       </div>
     </main>
-    <script src="script.js"></script>
+    <script src="../static/script.js"></script>
   </body>
 </html>

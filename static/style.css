@@ -92,7 +92,7 @@ select {
 }
 
 .error-box {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   height: 2.4rem;
@@ -153,8 +153,18 @@ button:active {
   border-radius: 5px;
 }
 
+.result-loader {
+  display: none;
+}
+
+.result-loader img {
+  height: 6.4rem;
+  width: 6.4rem;
+}
+
 .download-result:visited,
 .download-result:link {
+  display: none;
   font-size: 1.6rem;
   color: #7048e8;
   transition: all 0.3s;
