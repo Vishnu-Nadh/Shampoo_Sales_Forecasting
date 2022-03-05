@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from preprocessData import Preprocess_Data
+from predictAndSaveResult import Predict_Output
 
 app = Flask(__name__)
 
@@ -15,13 +16,12 @@ def predict():
         data_dic = request.json
         preprocess = Preprocess_Data(data_dic)
         from_date, to_date = preprocess.preprocess()
-        # output =
-
-        print(from_date, to_date)
-
-        return jsonify("result found")
+        predict = Predict_Output(from_date, to_date)
+        output = predict.predictSave()
+        print(output)
+        return jsonify(output)
     else:
-        return jsonify("no post request")
+        return jsonify("no post request arrived")
 
 
 if __name__ == "__main__":
