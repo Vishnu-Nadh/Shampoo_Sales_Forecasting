@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-
+from preprocessData import Preprocess_Data
 
 app = Flask(__name__)
 
@@ -13,7 +13,11 @@ def home():
 def predict():
     if request.method == "POST":
         data_dic = request.json
-        print(data_dic)
+        preprocess = Preprocess_Data(data_dic)
+        from_date, to_date = preprocess.preprocess()
+        # output =
+
+        print(from_date, to_date)
 
         return jsonify("result found")
     else:
