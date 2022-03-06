@@ -9,7 +9,7 @@ root = os.getcwd()
 app.config["SENT_FILE_DIR"] = os.path.join(root, "Result")
 
 
-@app.route("/", methods=["GET"])
+@app.route("/", methods=["GET", "POST"])
 def home():
     return render_template("index.html")
 
